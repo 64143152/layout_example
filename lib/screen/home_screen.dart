@@ -11,77 +11,91 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home'),
-      ),
-      body: Row(
-        children: [
-          Image.asset("images/a.jpg", width: 1000, height: 700),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Column(
+      appBar: AppBar(title: const Text('Home Screen')),
+      body: Container(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(
+              width: 230,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                    child: Text(
-                      'ทะเล',
-                      style: TextStyle(fontSize: 30),
+                  Text(
+                    "Strawberry Pavlova",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
                     ),
-                  )
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Container(
-                    child: Text('เป็นแหล่งน้ำเค็มขนาดใหญ่...'),
-                  )
-                ],
-              ),
-              Row(
-                children: [
-                  Icon(Icons.star),
-                  Icon(Icons.star),
-                  Icon(Icons.star),
-                  Icon(Icons.star),
-                  Icon(Icons.star),
-                  Container(
-                    child: Text('170 Review'),
-                  )
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Column(
+                  ),
+                  Text(
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisl nec condimentum"),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Icon(Icons.share),
-                      Container(
-                        child: Text('Share'),
-                      )
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.star,
+                            size: 14,
+                          ),
+                          Icon(
+                            Icons.star,
+                            size: 14,
+                          ),
+                          Icon(
+                            Icons.star,
+                            size: 14,
+                          ),
+                          Icon(
+                            Icons.star,
+                            size: 14,
+                          ),
+                          Icon(
+                            Icons.star,
+                            size: 14,
+                          ),
+                        ],
+                      ),
+                      Text("170 Reviews"),
                     ],
                   ),
-                  Column(
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Icon(Icons.share),
-                      Container(
-                        child: Text('Share'),
-                      )
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Icon(Icons.share),
-                      Container(
-                        child: Text('Share'),
-                      )
+                      Column(
+                        children: [
+                          Icon(Icons.nat),
+                          Text("Test"),
+                          Text("test"),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Icon(Icons.arrow_back_rounded),
+                          Text("Test"),
+                          Text("test"),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Icon(Icons.turn_slight_left_outlined),
+                          Text("Test"),
+                          Text("test"),
+                        ],
+                      ),
                     ],
                   ),
                 ],
               ),
-            ],
-          ),
-        ],
+            ),
+            Expanded(
+              child: Container(
+                child: Image.asset('images/a.jpg'),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
